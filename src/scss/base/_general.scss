@@ -1,0 +1,10 @@
+body{
+    font-family: OpenSans-Regular !important;
+    a{
+        font-weight: bold;
+        &:hover{
+            transition: all 500ms;
+            font-weight: bolder;
+        }
+    }
+}

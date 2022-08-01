@@ -1,0 +1,10 @@
+header{
+    ul{
+        a{
+            background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 2px no-repeat;
+            &:hover, &:active{
+                --d:100%;
+            }
+        }
+    }
+}

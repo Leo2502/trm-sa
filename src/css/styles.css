@@ -1,3 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: OpenSans-Regular !important;
+}
+body a {
+  font-weight: bold;
+}
+body a:hover {
+  transition: all 500ms;
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("../multimedia/fonts/static/OpenSans/OpenSans-Regular.ttf") format("truetype");
+}
+header ul a {
+  background: linear-gradient(currentColor 0 0) bottom/var(--d, 0) 2px no-repeat;
+}
+header ul a:hover, header ul a:active {
+  --d:100%;
+}
 
 /*# sourceMappingURL=styles.css.map */
