@@ -7,8 +7,12 @@
 }
 
 .carousel-item{
-    height: 86vh;
-    min-height: 300px;
+    @media screen and (max-width:865px) {
+        height: auto;
+    }
+    @media screen and (min-width:866px) {
+        height: 86vh;
+    }
     background: no-repeat scroll center scroll;
     -webkit-background-size: cover;
     background-size: cover;

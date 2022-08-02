@@ -29,11 +29,19 @@ body a:hover {
 }
 
 .carousel-item {
-  height: 86vh;
-  min-height: 300px;
   background: no-repeat scroll center scroll;
   -webkit-background-size: cover;
   background-size: cover;
+}
+@media screen and (max-width: 865px) {
+  .carousel-item {
+    height: auto;
+  }
+}
+@media screen and (min-width: 866px) {
+  .carousel-item {
+    height: 86vh;
+  }
 }
 .carousel-item::before {
   content: "";
