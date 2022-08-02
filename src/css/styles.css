@@ -22,6 +22,12 @@ body a:hover {
   font-family: OpenSans-Regular;
   src: url("../multimedia/fonts/static/OpenSans/OpenSans-Regular.ttf") format("truetype");
 }
+@media screen and (max-width: 992px) {
+  .swiffy-slider img {
+    height: 20vh;
+  }
+}
+
 header {
   position: sticky;
   top: 0;
