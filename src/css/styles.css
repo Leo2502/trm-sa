@@ -18,10 +18,43 @@ body a:hover {
   font-family: OpenSans-Regular;
   src: url("../multimedia/fonts/static/OpenSans/OpenSans-Regular.ttf") format("truetype");
 }
-header ul a {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+header .navbar {
+  height: 12vh;
+}
+@media screen and (max-width: 960px) {
+  header .navbar {
+    height: auto;
+  }
+}
+header .navbar .navbar__logo {
+  width: 5%;
+}
+@media screen and (max-width: 480px) {
+  header .navbar .navbar__logo {
+    width: 18%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  header .navbar .navbar__logo {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 993px) {
+  header .navbar .navbar-collapse {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+  }
+}
+header .navbar .navbar-collapse ul a {
   background: linear-gradient(currentColor 0 0) bottom/var(--d, 0) 2px no-repeat;
 }
-header ul a:hover, header ul a:active {
+header .navbar .navbar-collapse ul a:hover, header .navbar .navbar-collapse ul a:active {
   --d:100%;
 }
 
