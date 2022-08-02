@@ -28,6 +28,36 @@ body a:hover {
   }
 }
 
+.carousel-item {
+  height: 86vh;
+  min-height: 300px;
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: 0.5;
+}
+.carousel-item .carousel-caption {
+  bottom: 30%;
+}
+.carousel-item .carousel-caption h5 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+.carousel-item .carousel-caption p {
+  font-size: 1.5em;
+  top: 2em;
+}
+
 header {
   position: sticky;
   top: 0;
