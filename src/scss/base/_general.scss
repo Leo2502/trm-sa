@@ -1,5 +1,9 @@
 body{
     font-family: OpenSans-Regular !important;
+    .header_info{
+        font-size: 0.7em;
+        height: 1.5em;
+    }
     a{
         font-weight: bold;
         &:hover{

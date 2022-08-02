@@ -6,6 +6,10 @@
 body {
   font-family: OpenSans-Regular !important;
 }
+body .header_info {
+  font-size: 0.7em;
+  height: 1.5em;
+}
 body a {
   font-weight: bold;
 }
@@ -56,6 +60,10 @@ header .navbar .navbar-collapse ul a {
 }
 header .navbar .navbar-collapse ul a:hover, header .navbar .navbar-collapse ul a:active {
   --d:100%;
+}
+
+footer {
+  font-size: 0.75em;
 }
 
 /*# sourceMappingURL=styles.css.map */
