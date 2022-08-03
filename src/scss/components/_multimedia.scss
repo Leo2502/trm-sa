@@ -43,7 +43,7 @@
     @media screen and (max-width:480px) {
         display: flex;
         flex-flow: column wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     display: flex;
@@ -53,6 +53,7 @@
         width: 25%;
         @media screen and (max-width:480px) {
             width: 75%;
+            margin-bottom: 1em;
         }
         @media screen and (min-width:481px) and (max-width:1076px) {
             width: 45%;
