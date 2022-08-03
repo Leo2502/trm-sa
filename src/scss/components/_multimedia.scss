@@ -52,3 +52,45 @@
         width: 25%;
     }
 }
+
+.contactos_container{
+    @media screen and (max-width:480px) {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    .card{
+        .card-body{
+            width: auto;
+            background: linear-gradient(black 0 0) top /100% 5% no-repeat,
+            linear-gradient(black 0 0) bottom /100% 5% no-repeat,
+            linear-gradient(black 0 0) left /var(--d,0%) 100% no-repeat;
+            transition: 0.5s;
+        }
+        &:hover{
+            .card-body{
+                --d: 100%;
+                color: #fff;
+            }
+        }
+        .card-info{
+            li{
+                a{
+                    text-decoration: none;    
+                    color: black;
+                    font-weight: lighter;
+                    transition: all 500ms;
+                    &:hover{
+                        font-weight: bold;
+                    }
+                    &:visited{
+                        color:black;
+                    }
+                }
+            }
+        }
+    }
+}
