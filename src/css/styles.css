@@ -55,7 +55,7 @@ body a:hover {
   opacity: 0.5;
 }
 .carousel-item .carousel-caption {
-  bottom: 30%;
+  bottom: 41%;
 }
 .carousel-item .carousel-caption h5 {
   font-size: 2.5em;
@@ -64,6 +64,37 @@ body a:hover {
 .carousel-item .carousel-caption p {
   font-size: 1.5em;
   top: 2em;
+}
+
+.certificados {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .certificados {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+}
+.certificados img {
+  width: 25%;
+}
+
+.general_text {
+  text-align: justify;
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+@media screen and (max-width: 960px) {
+  .general_text {
+    font-size: 1em;
+  }
+}
+
+h4 {
+  font-weight: bolder;
 }
 
 header {
@@ -91,6 +122,9 @@ header .navbar .navbar__logo {
   header .navbar .navbar__logo {
     width: 15%;
   }
+}
+header .navbar .navbar-collapse {
+  transition: all 500ms;
 }
 @media screen and (min-width: 993px) {
   header .navbar .navbar-collapse {
