@@ -43,13 +43,20 @@
     @media screen and (max-width:480px) {
         display: flex;
         flex-flow: column wrap;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
     }
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     img{
         width: 25%;
+        @media screen and (max-width:480px) {
+            width: 75%;
+        }
+        @media screen and (min-width:481px) and (max-width:1076px) {
+            width: 45%;
+        }
     }
 }
 
@@ -57,27 +64,51 @@
     @media screen and (max-width:480px) {
         display: flex;
         flex-flow: column wrap;
+        justify-content: space-around;
         align-items: center;
     }
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     .card{
+        @media screen and (max-width:480px) {
+            margin-bottom: 2em;
+            width: 75%;
+        }
+        @media screen and (min-width:481px) and (max-width:1076px) {
+            width: 45%;
+            margin: 1em 0 1em 1em;
+        }
+        width: 20%;
+        .card-body--dias{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
         .card-body{
-            width: auto;
-            background: linear-gradient(black 0 0) top /100% 5% no-repeat,
-            linear-gradient(black 0 0) bottom /100% 5% no-repeat,
-            linear-gradient(black 0 0) left /var(--d,0%) 100% no-repeat;
-            transition: 0.5s;
+            .icon{
+                width: auto;
+                background: linear-gradient(black 0 0) top /100% 5% no-repeat,
+                linear-gradient(black 0 0) bottom /100% 5% no-repeat,
+                linear-gradient(black 0 0) left /var(--d,0%) 100% no-repeat;
+                transition: 0.5s;   
+            }
         }
         &:hover{
             .card-body{
-                --d: 100%;
-                color: #fff;
+                .icon{
+                    --d: 100%;
+                    color: #fff;
+                }
             }
         }
         .card-info{
             li{
+                @media screen and (max-width:480px) {
+                    font-size: 0.8em;
+                }
+                font-size: 0.8em;
                 a{
                     text-decoration: none;    
                     color: black;

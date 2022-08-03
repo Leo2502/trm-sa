@@ -69,40 +69,81 @@ body a:hover {
 
 .certificados {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 @media screen and (max-width: 480px) {
   .certificados {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 .certificados img {
   width: 25%;
 }
+@media screen and (max-width: 480px) {
+  .certificados img {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1076px) {
+  .certificados img {
+    width: 45%;
+  }
+}
 
 .contactos_container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 @media screen and (max-width: 480px) {
   .contactos_container {
     display: flex;
     flex-flow: column wrap;
+    justify-content: space-around;
     align-items: center;
   }
 }
-.contactos_container .card .card-body {
+.contactos_container .card {
+  width: 20%;
+}
+@media screen and (max-width: 480px) {
+  .contactos_container .card {
+    margin-bottom: 2em;
+    width: 75%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1076px) {
+  .contactos_container .card {
+    width: 45%;
+    margin: 1em 0 1em 1em;
+  }
+}
+.contactos_container .card .card-body--dias {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactos_container .card .card-body .icon {
   width: auto;
   background: linear-gradient(black 0 0) top/100% 5% no-repeat, linear-gradient(black 0 0) bottom/100% 5% no-repeat, linear-gradient(black 0 0) left/var(--d, 0%) 100% no-repeat;
   transition: 0.5s;
 }
-.contactos_container .card:hover .card-body {
+.contactos_container .card:hover .card-body .icon {
   --d: 100%;
   color: #fff;
+}
+.contactos_container .card .card-info li {
+  font-size: 0.8em;
+}
+@media screen and (max-width: 480px) {
+  .contactos_container .card .card-info li {
+    font-size: 0.8em;
+  }
 }
 .contactos_container .card .card-info li a {
   text-decoration: none;
