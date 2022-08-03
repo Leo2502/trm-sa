@@ -18,9 +18,7 @@ header{
         }
         .navbar-collapse{
             @media screen and (min-width:993px) {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: end;                
+                @include flexbox(flex, row nowrap, end)
             }
             transition: all 500ms;
             ul{

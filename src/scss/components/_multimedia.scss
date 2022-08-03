@@ -24,14 +24,39 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: black;
-        opacity: 0.5;
+        background: rgb(0, 0, 182);
+        opacity: 0.15;
     }
     .carousel-caption{
+        @include flexbox(flex, column wrap, center);
+        align-items: center;
+        width: 40%;
         bottom: 41%;
+        @media screen and (max-width:480px) {
+            bottom: 23%;            
+        }
+        background: no-repeat scroll center scroll;
+        -webkit-background-size: cover;
+        background-size: cover;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(49, 49, 49);
+            opacity: 0.5;
+        }
         h5{
+            @media screen and (max-width:480px) {
+                font-size: 1.25em;
+            }
             font-size: 2.5em;
             font-weight: 500;
+            opacity: 1;
+            color: white;
         }
         p{
             font-size: 1.5em;
@@ -41,14 +66,10 @@
 }
 .certificados{
     @media screen and (max-width:480px) {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-between;
+        @include flexbox(flex, column wrap, space-between);
         align-items: center;
     }
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    @include flexbox(flex, row wrap, space-around);
     img{
         width: 25%;
         @media screen and (max-width:480px) {
@@ -57,20 +78,17 @@
         }
         @media screen and (min-width:481px) and (max-width:1076px) {
             width: 45%;
+            margin-bottom: 1em;
         }
     }
 }
 
 .contactos_container{
     @media screen and (max-width:480px) {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-around;
+        @include flexbox(flex, column wrap, space-around);
         align-items: center;
     }
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    @include flexbox(flex, row wrap, space-around);
     .card{
         @media screen and (max-width:480px) {
             margin-bottom: 2em;
@@ -81,10 +99,14 @@
             margin: 1em 0 1em 1em;
         }
         width: 20%;
+        .card-body{
+            @media screen and (max-width:480px) {
+                height: 5vh;
+            }
+            height: 8vh;
+        }
         .card-body--dias{
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-between;
+            @include flexbox(flex, column wrap, space-between);
             align-items: center;
         }
         .card-body{
